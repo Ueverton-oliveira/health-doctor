@@ -4,9 +4,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.4'
 
 # Basic
-gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 4.1'
+gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 
 gem 'font-awesome-rails'
 gem 'sass-rails', '>= 6'
