@@ -1,0 +1,2 @@
+module PatientsBackoffice::DashboardHelper
+end

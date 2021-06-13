@@ -14,7 +14,6 @@ gem 'sass-rails', '>= 6'
 gem 'jbuilder', '~> 2.7'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
-
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
@@ -63,4 +62,6 @@ gem 'tty-spinner', '~> 0.9.3'
 gem 'aws-sdk-s3', '~> 1.86', require: false
 
 gem 'faker', '~> 2.15', '>= 2.15.1'
+
+gem 'tty-spinner', '~> 0.9.3'
 
