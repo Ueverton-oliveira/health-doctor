@@ -48,25 +48,12 @@
             <li class="nav-item">
 								<%= link_to doctors_backoffice_doctors_index_path, class: "nav-link" do%>
 									<i class="far fa-address-card"></i>
-									<span>Cadastro</span>
+									<span>Médicos</span>
 								<% end %>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-user-edit"></i>
-                    <span>Editar</span></a>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
         </ul>
         <!-- End of Sidebar -->
 
@@ -283,7 +270,6 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800"></h1>
                     <%= yield %>
 
                 </div>
