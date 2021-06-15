@@ -1,35 +1,33 @@
-<h3>Listando Médicos</h3>
+<h3>Lista de Médicos</h3>
 <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Nome COmpleto</th>
+      <th scope="col">Nome Completo</th>
+      <th scope="col">E-mail</th>
       <th scope="col">CRM</th>
       <th scope="col">CRM/UF</th>
     </tr>
   </thead>
   <tbody>
+    <% @doctors.each do |doctor| %>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
+      <th scope="row"><%= doctor.id %></th>
+      <td><%= doctor.name %></td>
+    </tr>
+    <tr>
+      <th scope="row"><%= doctor.id %></th>
+      <td><%= doctor.email %></td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>@fat</td>
+      <td><%= doctor.crm %></td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
+      <td><%= doctor.crm_uf %></td>
     </tr>
+    <% end %>
   </tbody>
 </table>
 <nav aria-label="...">

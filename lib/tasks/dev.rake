@@ -5,9 +5,9 @@ namespace :dev do
       show_spinner("Apagando BD...") { %x(rails db:drop) }
       show_spinner("Criando BD...") { %x(rails db:create) }
       show_spinner("Migrando BD...") { %x(rails db:migrate) }
-      show_spinner("Criando o Usuário para doutor...") { %x(rails dev:add_default_doctor) }
-      show_spinner("Criando o Usuário para paciente...") { %x(rails dev:add_default_patient) }
-
+      show_spinner("Criando Usuário para doutor...") { %x(rails dev:add_default_doctor) }
+      show_spinner("Criando Usuário para paciente...") { %x(rails dev:add_default_patient) }
+      show_spinner("Adicionando Usuário para doutores extras...") { %x(rails dev:add_extra_doctor) }
     else
       puts "Você não está em ambiente de desenvolvimento!"
     end
@@ -16,6 +16,9 @@ namespace :dev do
   desc "Adicionando usuário para doutor"  
   task add_default_doctor: :environment do
     Doctor.create!(
+      name: Faker::Name.name, 
+      crm: Faker::Code.rut,
+      crm_uf: Faker::Types.character,
       email: 'doctor@doctor.com',
       password: 'doctor123',
       password_confirmation: 'doctor123'
@@ -26,11 +29,28 @@ namespace :dev do
   desc "Adicionando usuário para patient"  
   task add_default_patient: :environment do
     Patient.create!(
+      name: Faker::Name.name, 
+      birth_date: Faker::Date.birthday(min_age: 18, max_age: 65),
+      cpf: Faker::IDNumber.brazilian_citizen_number,
       email: 'patient@patient.com',
       password: 'patient123',
       password_confirmation: 'patient123'
 
     )
+  end
+
+  desc "Adicionando Usuário para doutores extras"  
+  task add_extra_doctor: :environment do
+    10.times do |i|
+      Doctor.create!(
+        name: Faker::Name.name, 
+        crm: Faker::Code.rut,
+        crm_uf: Faker::Types.character,
+        email: Faker::Internet.email,
+        password: 'doctor123',
+        password_confirmation: 'doctor123'
+      )
+    end
   end
 
   private
