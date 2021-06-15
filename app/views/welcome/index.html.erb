@@ -1,23 +1,41 @@
-<section class="main-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1 class="text-inverse text-center">
-          Bem-vindo!
-        </h1>
-        <p class="lead text-inverse">
-          Vamos lá. Você é doutor ou paciente?
-        </p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Seja Bem vindo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'welcome', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <section class="main-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="text-inverse text-center">
+              Bem-vindo!
+            </h1>
+            <p class="lead text-inverse">
+              Vamos lá. Você é doutor ou paciente?
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-lg-offset-4 col-md-3 col-md-offset-3 col-sm-6 text-center">
+            <a class="btn btn-primary btn-lg btn-block" target="_self" href="/candidates/sign_in">Sou doutor</a>
+            </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+            <a class="btn btn-primary btn-lg btn-block" target="_self" href="/company_users/sign_in">Sou paciente</a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-2 col-lg-offset-4 col-md-3 col-md-offset-3 col-sm-6 text-center">
-        <a class="btn btn-primary btn-lg btn-block" target="_self" href="/candidates/sign_in">Sou doutor</a>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-6 text-center">
-        <a class="btn btn-primary btn-lg btn-block" target="_self" href="/company_users/sign_in">Sou paciente</a>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </body>
+</html>
+
 

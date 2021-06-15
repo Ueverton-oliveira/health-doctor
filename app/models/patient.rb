@@ -4,5 +4,5 @@ class Patient < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
-
+  validates :name, :birth_date, :cpf, presence: true
 end

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :doctors_backoffice do
+    get 'doctors/index'
+  end
   namespace :patients_backoffice do
     get 'dashboard/index'
   end

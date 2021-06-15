@@ -1,3 +1,115 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #939DA5;
+}
+
+.main-section {
+  background: linear-gradient(rgba(17,39,58,0.8), rgba(17,39,58,0.8)),url(https://d4zjpv0aa4kr2.cloudfront.net/assets/main_section/login-1e9d88f1f73a7a9963a9623a07ea0ed9eea90adaeac212c0d0ebb843541b081c.jpg) no-repeat center center;
+  background-size: auto, auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.welcome section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.main-section {
+  height: 664px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section {
+  padding-top: 40px;
+  padding-bottom: 56px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.text-center, .pricing .pricing-item .panel-body .pricing-button {
+  text-align: center;
+}
+
+.text-inverse, .infographic-grid-list {
+  color: #ffffff;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 48px;
+}
+p {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.main-section .container .btn {
+  margin-top: 16px;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  padding: 12px 16px;
+}
+
+.btn-primary {
+  background-color: hsl(188, 48%, 49%);
+  color: #FFFFFF;
+  border-color: #2e6da4;
+}
+
+.btn-primary:hover {
+  background-color: #4bc5d8;
+}
+
+.btn {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a.btn-primary:hover, a.btn-default:hover, a.btn-success:hover, a.btn-danger:hover {
+  box-shadow: none !important;
+}
+
+.row {
+  text-align: center;
+}
