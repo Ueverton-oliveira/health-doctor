@@ -323,9 +323,6 @@ GEM
       tilt
     shoulda-matchers (4.5.1)
       activesupport (>= 4.2.0)
-    simple_form (5.1.0)
-      actionpack (>= 5.2)
-      activemodel (>= 5.2)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -388,6 +385,7 @@ DEPENDENCIES
   factory_bot_rails (~> 6.1)
   faker (~> 2.15, >= 2.15.1)
   font-awesome-rails
+  i18n
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (~> 1.1)
@@ -401,7 +399,6 @@ DEPENDENCIES
   rubocop-rspec (~> 2.0)
   sass-rails (>= 6)
   shoulda-matchers (~> 4.4, >= 4.4.1)
-  simple_form (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   tty-spinner (~> 0.9.3)

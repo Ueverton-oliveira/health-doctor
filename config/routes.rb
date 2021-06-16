@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
-  namespace :doctors_backoffice do
-    get 'doctors/index'
-  end
   namespace :patients_backoffice do
     get 'dashboard/index'
+    resources :patients, only: [:index]
   end
   namespace :doctors_backoffice do
     get 'dashboard/index'
+    resources :doctors, only: [:index, :edit, :update]
   end
   devise_for :patients
   devise_for :doctors

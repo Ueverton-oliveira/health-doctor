@@ -1,0 +1,40 @@
+<h1>Editando Médicos</h1>
+<%= if @doctor.errors.any? %>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+    <ul>
+      <%= @doctor.errors.full_messages.each do |message|%>
+      <li> <%= message %> </li>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with(model: [ :doctors_backoffice, @doctor ]) do |form| %>
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class:"form-control", placeholder:"Enter nome" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class:"form-control", placeholder:"Enter email" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :crm %>
+    <%= form.text_field :crm, class:"form-control", placeholder:"Enter CRM" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :crm_uf %>
+    <%= form.text_field :crm_uf, class:"form-control", placeholder:"Enter CRM-UF" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :password %>
+    <%= form.text_field :password, class:"form-control", placeholder:"Senha" %>
+  </div>
+  <div class="form-group">
+  <%= form.label :password_confirmation %>
+  <%= form.text_field :password_confirmation, class:"form-control", placeholder:"Senha" %>
+  </div>
+  <br>
+  <button type="back" class="btn btn-outline-secondary">Voltar</button>
+  <button type="submit" class="btn btn-primary">Salvar</button>
+<% end %>

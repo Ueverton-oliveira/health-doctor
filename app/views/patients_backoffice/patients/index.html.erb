@@ -1,0 +1,22 @@
+<h3>Lista de Pacientes</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome Completo</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Idade</th>
+      <th scope="col">CPF</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @patients.each do |patient| %>
+    <tr>
+      <th scope="row"><%= patient.id %></th>
+      <td><%= patient.name %></td>
+      <td><%= patient.email %></td>
+      <td><%= patient.birth_date %></td>
+      <td><%= patient.cpf %></td>
+    </tr>
+    <% end %>
+  </tbody>

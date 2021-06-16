@@ -1,0 +1,2 @@
+module PatientsBackoffice::PatientsHelper
+end

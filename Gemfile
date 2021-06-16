@@ -20,7 +20,6 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'cucumber-rails', '~> 2.2', require: false
   gem 'factory_bot_rails', '~> 6.1'
-
   gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
   gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
 end
@@ -45,8 +44,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'devise', '~> 4.7', '>= 4.7.3'
 
-gem 'simple_form', '~> 5.0'
-
 gem 'rubocop', require: false
 
 gem 'rubocop-rails', '~> 2.9', require: false
@@ -63,4 +60,4 @@ gem 'aws-sdk-s3', '~> 1.86', require: false
 
 gem 'faker', '~> 2.15', '>= 2.15.1'
 
-
+gem 'i18n'

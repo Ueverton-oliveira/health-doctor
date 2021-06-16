@@ -1,16 +1,47 @@
-<h3>Cadastro de novos médicos</h3>
-<br>
-<form>
-  <div class="form-group">
-    <label for="formGroupExampleInput">Nome do médico</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Fulano da Silva">
-  </div>
-  <div class="form-group">
-    <label for="formGroupExampleInput2">CRM</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="123456">
-  </div>
-  <div class="form-group">
-    <label for="formGroupExampleInput2">CRM-UF</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="SP">
-  </div>
-</form>
+<h3>Lista de Médicos</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome Completo</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">CRM</th>
+      <th scope="col">CRM/UF</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @doctors.each do |doctor| %>
+    <tr>
+      <th scope="row"><%= doctor.id %></th>
+      <td><%= doctor.name %></td>
+      <td><%= doctor.email %></td>
+      <td><%= doctor.crm %></td>
+      <td><%= doctor.crm_uf %></td>
+      <td>
+        <%= link_to edit_doctors_backoffice_doctor_path(doctor), class:"btn btn-primary btn-circle btn-sm" do %>
+          <i class="fas fa-edit"></i>
+        <% end %>
+        <a href="#" class="btn btn-danger btn-circle btn-sm">
+          <i class="fas fa-trash"></i>
+        </a>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active">
+      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>

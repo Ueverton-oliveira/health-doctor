@@ -1,0 +1,27 @@
+'pt-BR':
+  activerecord:
+    models:
+      doctor: 
+        one: Doutor
+        other: Doutores
+      patient: 
+        one: Paciente
+        other: Pacientes
+      appointment: 
+        one: Consuta
+        other: Consultas
+    attributes:
+      doctor:
+        name: Nome
+        email: Email
+        crm: CRM
+        crm_uf: CRM-UF
+      patient:
+        name: Nome
+        birth_date: Data de nascimento
+        crm: CRM
+        cpf: CPF
+      appointments:
+        starts_at: Date e horário de início de atendimento
+        ends_at: Date e horário de término de atendimento
+      # will translate User attribute "login" as "Handle"

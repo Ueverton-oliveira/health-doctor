@@ -27,10 +27,10 @@
         </div>
         <div class="row">
           <div class="col-lg-3 col-lg-offset-4 col-md-3 col-md-offset-3 col-sm-6 text-center">
-            <a class="btn btn-primary btn-lg btn-block" target="_self" href="/candidates/sign_in">Sou doutor</a>
-            </div>
+            <%= link_to "Sou doutor", doctor_session_path, class: "btn btn-primary btn-lg btn-block", target:"_self" %>
+          </div>
           <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-            <a class="btn btn-primary btn-lg btn-block" target="_self" href="/company_users/sign_in">Sou paciente</a>
+            <%= link_to "Sou Paciente", patient_session_path, class: "btn btn-primary btn-lg btn-block", target:"_self" %>
           </div>
         </div>
       </div>
