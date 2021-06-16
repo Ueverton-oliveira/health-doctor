@@ -7,7 +7,11 @@
       <th scope="col">E-mail</th>
       <th scope="col">CRM</th>
       <th scope="col">CRM/UF</th>
-      <th scope="col"></th>
+      <th scope="col">
+        <%= link_to new_doctors_backoffice_doctor_path, class:"btn btn-primary btn-success btn-sm" do %>
+          <i class="fas fa-plus"></i>
+        <% end %>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -22,9 +26,9 @@
         <%= link_to edit_doctors_backoffice_doctor_path(doctor), class:"btn btn-primary btn-circle btn-sm" do %>
           <i class="fas fa-edit"></i>
         <% end %>
-        <a href="#" class="btn btn-danger btn-circle btn-sm">
+        <%= link_to doctors_backoffice_doctor_path(doctor), method: :delete, class:"btn btn-danger btn-circle btn-sm", data: { confirm: "Confirmar exclusão!"} do %>
           <i class="fas fa-trash"></i>
-        </a>
+        <% end %>
       </td>
     </tr>
     <% end %>

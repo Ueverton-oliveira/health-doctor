@@ -8,6 +8,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.0",
     "bootstrap": "^5.0.1",
+    "bootstrap-growl-ifightcrime": "^1.1.0",
     "fastclick": "^1.0.6",
     "jquery": "^3.6.0",
     "jquery.easing": "^1.4.1",

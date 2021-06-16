@@ -10,6 +10,9 @@ gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 
 gem 'font-awesome-rails'
 gem 'sass-rails', '>= 6'
+gem 'simple_form' # Simpler rails forms
+# cpf cnpj
+gem 'cpf_cnpj'
 
 gem 'jbuilder', '~> 2.7'
 gem 'turbolinks', '~> 5'
@@ -60,4 +63,3 @@ gem 'aws-sdk-s3', '~> 1.86', require: false
 
 gem 'faker', '~> 2.15', '>= 2.15.1'
 
-gem 'i18n'

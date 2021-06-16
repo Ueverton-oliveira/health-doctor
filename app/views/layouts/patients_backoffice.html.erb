@@ -161,5 +161,17 @@
     </div>
     <%= javascript_pack_tag 'application' %>
     <%= javascript_pack_tag 'patients_backoffice' %>
+
+    <% if notice %>
+			<%= javascript_tag do %>
+        $.bootstrapGrowl('<%= notice %>', {
+        type: 'success', // (null, 'info', 'danger', 'success')
+        offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
+        align: 'right', // ('left', 'right', or 'center')
+        allow_dismiss: true, // If true then will display a cross to close the popup.
+        stackup_spacing: 10 // spacing between consecutively stacked growls.
+        });
+      <% end %>
+		<% end %>
   </body>
 </html>

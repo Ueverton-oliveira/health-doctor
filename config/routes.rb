@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
   namespace :doctors_backoffice do
     get 'dashboard/index'
-    resources :doctors, only: [:index, :edit, :update]
+    resources :doctors
   end
   devise_for :patients
   devise_for :doctors
