@@ -65,3 +65,4 @@ gem 'aws-sdk-s3', '~> 1.86', require: false
 
 gem 'faker', '~> 2.15', '>= 2.15.1'
 
+gem  "simple_calendar" ,  "~> 2.4"

@@ -3,3 +3,4 @@
 //= require jquery-easing/jquery.easing.min.js
 //= require sb-admin-2.min.js
 //= require bootstrap-growl-ifightcrime/jquery.bootstrap-growl.js
+//= require jquery-ui/ui/widgets/datepicker.js
