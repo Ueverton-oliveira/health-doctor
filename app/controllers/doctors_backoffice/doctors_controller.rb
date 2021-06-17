@@ -3,7 +3,7 @@ class DoctorsBackoffice::DoctorsController < DoctorsBackofficeController
   before_action :set_doctor, only: [:edit, :update, :destroy]
 
   def index
-    @doctors = Doctor.all
+    @doctors = Doctor.all.page(params[:page]).per(10)
   end
 
   def new

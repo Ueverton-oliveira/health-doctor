@@ -7,6 +7,10 @@
       <th scope="col">E-mail</th>
       <th scope="col">Idade</th>
       <th scope="col">CPF</th>
+      <th scope="col">
+        <%= link_to new_patients_backoffice_patient_path, class:"btn btn-primary btn-success btn-sm" do %>
+          <i class="fas fa-plus"></i>
+        <% end %>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +21,17 @@
       <td><%= patient.email %></td>
       <td><%= patient.birth_date %></td>
       <td><%= patient.cpf %></td>
+      <td>
+        <%= link_to edit_patients_backoffice_patient_path(patient), class:"btn btn-primary btn-circle btn-sm" do %>
+          <i class="fas fa-edit"></i>
+        <% end %>
+        <%= link_to patients_backoffice_patient_path(patient), method: :delete, class:"btn btn-danger btn-circle btn-sm", data: { confirm: "Confirmar exclusão!"} do %>
+          <i class="fas fa-trash"></i>
+        <% end %>
+      </td>
     </tr>
     <% end %>
   </tbody>
+</table>
+<%= paginate @patients %>
+  

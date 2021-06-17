@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HealthDoctor</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application' %>
+		<%= stylesheet_link_tag 'patient_devise' %>
+  </head>
+	<body class="bg-gradient-primary">
+		<div class="container">
+			<%= yield %>
+		</div>
+		<%= javascript_pack_tag 'application' %>
+		<%= javascript_pack_tag 'patient_devise' %>
+	</body>
+</html>

@@ -8,7 +8,7 @@
       <th scope="col">CRM</th>
       <th scope="col">CRM/UF</th>
       <th scope="col">
-        <%= link_to new_doctors_backoffice_doctor_path, class:"btn btn-primary btn-success btn-sm" do %>
+        <%= link_to new_patients_backoffice_patient_path, class:"btn btn-primary btn-success btn-sm" do %>
           <i class="fas fa-plus"></i>
         <% end %>
       </th>
@@ -34,18 +34,4 @@
     <% end %>
   </tbody>
 </table>
-<nav aria-label="...">
-  <ul class="pagination">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active">
-      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
+<%= paginate @doctors %>

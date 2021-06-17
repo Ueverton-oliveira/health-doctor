@@ -14,7 +14,9 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # /app/assets
 Rails.application.config.assets.precompile += %w( doctors_backoffice.js doctors_backoffice.css 
-                                                  patients_backoffice.js patients_backoffice.css )
+                                                  patients_backoffice.js patients_backoffice.css 
+                                                  doctor_devise.js doctor_devise.css 
+                                                  patient_devise.js patient_devise.css )
 
 # /lib/assets
 Rails.application.config.assets.precompile += %w( sb-admin-2.min.js sb-admin-2.min.css )

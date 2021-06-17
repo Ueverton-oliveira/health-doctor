@@ -13,6 +13,8 @@ gem 'sass-rails', '>= 6'
 gem 'simple_form' # Simpler rails forms
 # cpf cnpj
 gem 'cpf_cnpj'
+gem 'kaminari'
+gem 'kaminari-i18n'
 
 gem 'jbuilder', '~> 2.7'
 gem 'turbolinks', '~> 5'
