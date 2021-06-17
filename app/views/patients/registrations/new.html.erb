@@ -1,25 +1,49 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+<div class="row justify-content-center">
+  <div class="col-xl-10 col-lg-12 col-md-9">
+    <div class="card o-hidden border-0 shadow-lg my-5">
+      <div class="card-body p-0">
+          <!-- Nested Row within Card Body -->
+          <div class="row">
+              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-center">
+                      <h1 class="h4 text-gray-900 mb-4">Cadastre-se!</h1>
+                  </div>
+                  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                      <%= f.error_notification %>
+                      <div class="form-group">
+                          <%= f.input :email,
+                                      required: true,
+                                      autofocus: true,
+                                      input_html: { autocomplete: "email", class:"form-control form-control-user" } %>
+                      </div>
+                      <div class="form-group">
+                          <%= f.input :password,
+                                      required: true,
+                                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                                      input_html: { autocomplete: "new-password", class:"form-control form-control-user" } %>
+                      </div>
+                      <div class="form-group">
+                          <%= f.input :password_confirmation,
+                                      required: true,
+                                      input_html: { autocomplete: "new-password", class:"form-control form-control-user" } %>
+                      </div>
+                      <%= f.button :submit, "Cadastrar", class:"btn btn-primary btn-user btn-block" %>
+                  <% end %>
+                  <hr>
+                  <div class="text-center">
+                    <%= render "patients/shared/links" %>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
 
-<%= render "patients/shared/links" %>
+
+
+
