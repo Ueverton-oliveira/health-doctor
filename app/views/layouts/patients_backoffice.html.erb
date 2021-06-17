@@ -34,9 +34,9 @@
 
           <!-- Nav Item - Dashboard -->
           <li class="nav-item">
-            <%= link_to doctors_backoffice_dashboard_index_path, class: "nav-link" do %>
-              <i class="fas fa-fw fa-tachometer-alt"></i>
-              <span>Dashboard</span>
+            <%= link_to patients_backoffice_patients_path, class: "nav-link" do %>
+              <i class="fas fa-hospital-user"></i>
+              <span>Pacientes</span>
             <% end %>
           </li>
         </ul>
@@ -162,16 +162,5 @@
     <%= javascript_pack_tag 'application' %>
     <%= javascript_pack_tag 'patients_backoffice' %>
 
-    <% if notice %>
-      <%= javascript_tag do %>
-        $.bootstrapGrowl('<%= notice %>', {
-        type: 'success', // (null, 'info', 'danger', 'success')
-        offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
-        align: 'right', // ('left', 'right', or 'center')
-        allow_dismiss: true, // If true then will display a cross to close the popup.
-        stackup_spacing: 10 // spacing between consecutively stacked growls.
-        });
-      <% end %>
-    <% end %>
   </body>
 </html>
