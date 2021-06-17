@@ -26,7 +26,7 @@
         <%= link_to edit_doctors_backoffice_doctor_path(doctor), class:"btn btn-primary btn-circle btn-sm" do %>
           <i class="fas fa-edit"></i>
         <% end %>
-        <%= link_to doctors_backoffice_doctor_path(doctor), method: :delete, class:"btn btn-danger btn-circle btn-sm", data: { confirm: "Confirmar exclusão!"} do %>
+        <%= link_to doctors_backoffice_doctor_path(doctor), method: :delete, class:"btn btn-danger btn-circle btn-sm", data: { confirm: "Realmente deseja excluir médico!"} do %>
           <i class="fas fa-trash"></i>
         <% end %>
       </td>

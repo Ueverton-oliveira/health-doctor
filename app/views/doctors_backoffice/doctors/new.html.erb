@@ -25,6 +25,8 @@
   <%= form.password_field :password_confirmation, class:"form-control", placeholder:"Confirmação de Senha" %>
   </div>
   <br>
-  <%= link_to "Voltar", doctors_backoffice_doctors_path, class:"btn btn-outline-secondary"%>
-  <button type="submit" class="btn btn-primary">Salvar</button>
+  <div class="form-group">
+    <%= link_to "Voltar", doctors_backoffice_doctors_path, class:"btn btn-outline-secondary"%>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </div>
 <% end %>
