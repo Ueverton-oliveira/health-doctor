@@ -5,4 +5,8 @@ class Doctor < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, :crm, :crm_uf, presence: true
+
+  scope :search_by, lambda { |doctor|
+    where(doctor)
+  }
 end

@@ -1,6 +1,6 @@
 class DoctorsBackoffice::DoctorsController < DoctorsBackofficeController
   before_action :password_verify, only: [:update]
-  before_action :set_doctor, only: [:edit, :update, :destroy]
+  before_action :set_doctor, only: %i[edit update destroy]
 
   def index
     @doctors = Doctor.all.page(params[:page]).per(10)
@@ -13,18 +13,17 @@ class DoctorsBackoffice::DoctorsController < DoctorsBackofficeController
   def create
     @doctor = Doctor.new(params_doctor)
     if @doctor.save!
-      redirect_to  doctors_backoffice_doctors_path, notice: "Médico criado com sucesso!"
+      redirect_to doctors_backoffice_doctors_path, notice: 'Médico criado com sucesso!'
     else
       render :new
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @doctor.update(params_doctor)
-      redirect_to  doctors_backoffice_doctors_path, notice: "Médico atualizado com sucesso!"
+      redirect_to doctors_backoffice_doctors_path, notice: 'Médico atualizado com sucesso!'
     else
       render :edit
     end
@@ -32,7 +31,7 @@ class DoctorsBackoffice::DoctorsController < DoctorsBackofficeController
 
   def destroy
     if @doctor.destroy
-      redirect_to  doctors_backoffice_doctors_path, notice: "Médico excluído com sucesso!"
+      redirect_to doctors_backoffice_doctors_path, notice: 'Médico excluído com sucesso!'
     else
       render :index
     end

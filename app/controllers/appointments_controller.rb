@@ -1,6 +1,10 @@
 class AppointmentsController < ApplicationController
   layout 'appointments'
 
+  def home
+    @appointments = Appointment.where(doctor_id: nil, patient_id: nil)
+  end
+
   def index
     @appointments = Appointment.all.page(params[:page]).per(10)
   end
@@ -11,15 +15,14 @@ class AppointmentsController < ApplicationController
 
   def create
     @appointment = Appointment.new(params_appointment)
-    if @appointment .save!
-      redirect_to  appointments_path, notice: "Médico criado com sucesso!"
+    if @appointment.save!
+      redirect_to appointments_path, notice: 'Médico criado com sucesso!'
     else
       render :new
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   private
 

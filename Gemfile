@@ -16,10 +16,10 @@ gem 'cpf_cnpj'
 gem 'kaminari'
 gem 'kaminari-i18n'
 
+gem 'bootsnap', '>= 1.4.2', require: false
 gem 'jbuilder', '~> 2.7'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
-gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -65,4 +65,4 @@ gem 'aws-sdk-s3', '~> 1.86', require: false
 
 gem 'faker', '~> 2.15', '>= 2.15.1'
 
-gem  "simple_calendar" ,  "~> 2.4"
+gem 'simple_calendar', '~> 2.4'

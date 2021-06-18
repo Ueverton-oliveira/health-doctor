@@ -1,6 +1,8 @@
 class DashboardController < ApplicationController
-  #before_action :authenticate_doctor, !
   layout 'dashboard'
-  def index
+  def index; end
+
+  def search_doctor
+    @doctor = Doctor.search_by(params[:doctor])
   end
 end

@@ -13,11 +13,12 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 
 # /app/assets
-Rails.application.config.assets.precompile += %w( doctors_backoffice.js doctors_backoffice.css 
-                                                  patients_backoffice.js patients_backoffice.css 
-                                                  doctor_devise.js doctor_devise.css 
-                                                  patient_devise.js patient_devise.css 
-                                                  appointments.js appointments.css )
+Rails.application.config.assets.precompile += %w[ doctors_backoffice.js doctors_backoffice.css
+                                                  patients_backoffice.js patients_backoffice.css
+                                                  doctor_devise.js doctor_devise.css
+                                                  patient_devise.js patient_devise.css
+                                                  appointments.js appointments.css
+                                                  dashboard.js dashboard.css]
 
 # /lib/assets
-Rails.application.config.assets.precompile += %w( sb-admin-2.min.js sb-admin-2.min.css )
+Rails.application.config.assets.precompile += %w[sb-admin-2.min.js sb-admin-2.min.css]
