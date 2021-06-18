@@ -39,23 +39,21 @@ class AppointmentsController < ApplicationController
   end
 
   def event_params
-    if !!params[:event] && (params[:event]["start_at(4i)"].present? || params[:event]["start_at(5i)"].present?)
-  
-      if params[:event][:start_at_date].present?
-        start_at_date = params[:event][:start_at_date]
-      else
-        start_at_date = Date.today
-      end
-      year  = start_at_date.match(/^(\d{4})[\-\/]/)[1]
-      month = start_at_date.match(/[\-\/](\d{2})[\-\/]/)[1]
-      day   = start_at_date.match(/[\-\/](\d{2})$/)[1]
-      params[:event]["start_at(1i)"] = year
-      params[:event]["start_at(2i)"] = month
-      params[:event]["start_at(3i)"] = day
+    if !!params[:event] && (params[:event]['start_at(4i)'].present? || params[:event]['start_at(5i)'].present?)
+
+      start_at_date = if params[:event][:start_at_date].present?
+                        params[:event][:start_at_date]
+                      else
+                        Date.today
+                      end
+      year  = start_at_date.match(%r{^(\d{4})[\-/]})[1]
+      month = start_at_date.match(%r{[\-/](\d{2})[\-/]})[1]
+      day   = start_at_date.match(%r{[\-/](\d{2})$})[1]
+      params[:event]['start_at(1i)'] = year
+      params[:event]['start_at(2i)'] = month
+      params[:event]['start_at(3i)'] = day
     end
   end
-
-
 
   def params_date
     appointment = Datetime.now

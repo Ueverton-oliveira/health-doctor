@@ -10,6 +10,6 @@ class Patient < ApplicationRecord
 
   def age(birth)
     now = Time.now.utc.to_date
-    now.year - birth.year - ((now.month > birth.month || (now.month == birth.month && now.day >= birth.day)) ? 0 : 1)
+    now.year - birth.year - (now.month > birth.month || (now.month == birth.month && now.day >= birth.day) ? 0 : 1)
   end
 end

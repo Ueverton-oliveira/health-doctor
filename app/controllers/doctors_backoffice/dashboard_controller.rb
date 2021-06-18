@@ -1,4 +1,3 @@
 class DoctorsBackoffice::DashboardController < DoctorsBackofficeController
-  def index
-  end
+  def index; end
 end
