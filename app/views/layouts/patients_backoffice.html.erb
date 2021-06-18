@@ -22,7 +22,7 @@
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
           <!-- Sidebar - Brand -->
-          <%= link_to doctors_backoffice_dashboard_index_path, class: "sidebar-brand d-flex align-items-center justify-content-center" do %>
+          <%= link_to dashboard_index_path, class: "sidebar-brand d-flex align-items-center justify-content-center" do %>
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-stethoscope"></i>
             </div>
@@ -34,7 +34,21 @@
 
           <!-- Nav Item - Dashboard -->
           <li class="nav-item">
-            <%= link_to patients_backoffice_patients_path, class: "nav-link" do %>
+            <%= link_to  dashboard_index_path, class: "nav-link" do %>
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+            <% end %>
+          </li>
+          <!-- Nav Item - Doctor -->
+          <li class="nav-item">
+            <%= link_to  doctors_backoffice_doctors_path, class: "nav-link" do %>
+              <i class="fas fa-user-md"></i>
+              <span>Médicos</span>
+            <% end %>
+          </li>
+          <!-- Nav Item - Patient -->
+          <li class="nav-item">
+            <%= link_to  patients_backoffice_patients_path, class: "nav-link" do %>
               <i class="fas fa-hospital-user"></i>
               <span>Pacientes</span>
             <% end %>
