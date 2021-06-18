@@ -1,43 +1,38 @@
-<h3>Agendamento de Consulta Médica</h3>
-<hr>
-<div class="card style="width: 18rem;">
-  <div class="card-body">
-    <form>
-      <div class="form-group row">
-        <label for="inputEmail3" class="col-sm-2 col-form-label">Nome do Paciente</label>
-        <div class="col-10">
-          <select id="disabledSelect" class="form-control">
-            <option>Sr. Ciclano de Tal</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="inputEmail3" class="col-sm-2 col-form-label">Nome do Doutor</label>
-        <div class="col-10">
-          <select id="disabledSelect" class="form-control">
-            <option>Dr. Fulano de Tal </option>
-          </select>
-        </div>
-      </div>
-      
-      <div class="form-group row">
-        <label for="inputEmail3" class="col-sm-2 col-form-label">Date e Horário</label>
-        <div class="col-10">
-        </div>
-      </div>
 
-      
-      
-        
-      <br>
-      <div class="form-group row">
-        <div class="col-sm-12">
-          <button type="submit" class="btn btn-success btn-lg btn-block">Confirmar agendamento</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
+<h3>Agendamento de Consulta</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome do Paciente</th>
+      <th scope="col">Nome do Médico</th>
+      <th scope="col">Data</th>
+      <th scope="col">Horário</th>
+      <th scope="col">
+        <%= link_to  new_appointment_path, class:"btn btn-primary btn-success btn-sm" do %>
+          <i class="fas fa-plus"></i>
+        <% end %>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @appointments.each do |appointment| %>
+    <tr>
+      <th scope="row"><%= appointment.id %></th>
+      <td><%= appointment.doctor_id %></td>
+      <td><%= appointment.patient_id %></td>
+      <td><%= appointment.starts_at %></td>
+      <td><%= appointment.ends_at %></td>
+      <td>
+        <%= link_to  edit_appointment_path(appointment), class:"btn btn-primary btn-circle btn-sm" do %>
+          <i class="fas fa-edit"></i>
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @appointments %>
 
 
 
