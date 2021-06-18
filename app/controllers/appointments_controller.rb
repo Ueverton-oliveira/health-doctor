@@ -29,4 +29,9 @@ class AppointmentsController < ApplicationController
   def params_appointment
     params.require(:appointment).permit(:starts_at, :ends_at)
   end
+
+  def params_date
+    appointment = Datetime.now
+    appointment.strftime
+  end
 end

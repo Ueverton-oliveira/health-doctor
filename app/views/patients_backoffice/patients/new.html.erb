@@ -10,11 +10,11 @@
   </div>
   <div class="form-group">
     <%= form.label :birth_date %>
-    <%= form.text_field :birth_date, class:"form-control", placeholder:"Enter Idade" %>
+    <%= form.text_field :crm, class:"form-control", placeholder:"Enter CRM" %>
   </div>
   <div class="form-group">
     <%= form.label :cpf %>
-    <%= form.text_field :cpf  class:"form-control", placeholder:"Enter CPF" %>
+    <%= form.text_field :crm_uf, class:"form-control", placeholder:"Enter CRM-UF" %>
   </div>
   <div class="form-group">
     <%= form.label :password %>
@@ -25,6 +25,8 @@
   <%= form.password_field :password_confirmation, class:"form-control", placeholder:"Confirmação de Senha" %>
   </div>
   <br>
-  <%= link_to "Voltar", patients_backoffice_patients_path, class:"btn btn-outline-secondary"%>
-  <button type="submit" class="btn btn-primary">Salvar</button>
+  <div class="form-group">
+    <%= link_to "Voltar", patients_backoffice_patients_path, class:"btn btn-outline-secondary"%>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </div>
 <% end %>

@@ -5,4 +5,5 @@ class Patient < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, :birth_date, :cpf, presence: true
+
 end

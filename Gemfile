@@ -13,6 +13,8 @@ gem 'sass-rails', '>= 6'
 gem 'simple_form' # Simpler rails forms
 # cpf cnpj
 gem 'cpf_cnpj'
+# Validators
+gem "validators"
 gem 'kaminari'
 gem 'kaminari-i18n'
 

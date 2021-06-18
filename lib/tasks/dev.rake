@@ -9,6 +9,7 @@ namespace :dev do
       show_spinner('Criando Usuário para paciente...') { `rails dev:add_default_patient` }
       show_spinner('Adicionando Usuário para doutores extras...') { `rails dev:add_extra_doctor` }
       show_spinner('Adicionando Usuário para pacientes extras...') { `rails dev:add_extra_patient` }
+      show_spinner('Adicionando novas Consultas...') { `rails dev:add_appointment` }
     else
       puts 'Você não está em ambiente de desenvolvimento!'
     end
@@ -62,6 +63,18 @@ namespace :dev do
         email: Faker::Internet.email,
         password: 'patient123',
         password_confirmation: 'patient123'
+      )
+    end
+  end
+
+  desc 'Adicionando novas Consultas'
+  task add_appointment: :environment do
+    10.times do |_i|
+      Appointment.create!(
+        doctor_id: @appointment.doctor_id,
+        patient_id: @appointment.patient_id,
+        starts_at: Faker::Date.in_date_period(year: 2018, month: 2),
+        ends_at: Faker::Date.in_date_period(year: 2021, month: 12)
       )
     end
   end
